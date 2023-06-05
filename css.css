@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: beige;
+    background-color: #14EBD7;
 }
 .topnav {
     overflow: hidden;
@@ -58,13 +58,14 @@ body {
 
 div.center {
     text-align: center;
-    background-color: rgb(255, 196, 245);
+    background-color: #1493EB;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
     height: 100%;
-  }
+    font-family: Century Gothic;
+    }
 
   .grid-container { /*Games*/
     display: grid;
@@ -80,6 +81,7 @@ div.center {
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    font-family: Helvetica;
   }
 
   * {
