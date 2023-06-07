@@ -1,7 +1,3 @@
-let x;
-x = 3 * 4;
-document.getElementById("demo").innerHTML = "3 * 4 = " + x;
-
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -10,3 +6,9 @@ function myFunction() {
       x.className = "topnav";
     }
   }
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();

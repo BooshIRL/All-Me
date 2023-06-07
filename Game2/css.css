@@ -56,34 +56,6 @@ body {
     }
   }
 
-div.center {
-    text-align: center;
-    background-color: #1493EB;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    height: 100%;
-    font-family: Century Gothic;
-    }
-
-  .grid-container { /*Games*/
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    padding: 1px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    font-family: Helvetica;
-  }
-
   * {
     box-sizing: border-box;
   }
