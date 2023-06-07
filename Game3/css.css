@@ -56,15 +56,9 @@ body {
     }
   }
 
-div.center {
-    text-align: center;
-    background-color: #1493EB;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    height: 100%;
-    font-family: Century Gothic;
+.center {
+  margin: auto;
+  width: 200px;
     }
 
   .grid-container { /*Games*/
@@ -115,6 +109,4 @@ div.center {
   canvas {
     border:1px solid white;
     background-color: whitesmoke;
-    position: absolute;
-    left: 45%;
   }
