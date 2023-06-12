@@ -56,11 +56,6 @@ body {
     }
   }
 
-.center {
-  margin: auto;
-  width: 200px;
-    }
-
   .grid-container { /*Games*/
     display: grid;
     grid-template-columns: auto auto auto;
@@ -105,6 +100,11 @@ body {
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+
+  .center {
+    margin: auto;
+    width: 200px;
+      }
 
   canvas {
     border:1px solid white;
