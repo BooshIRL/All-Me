@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #14EBD7;
+    background-color: hsl(174, 84%, 50%);
 }
 .topnav {
     overflow: hidden;
@@ -58,7 +58,7 @@ body {
 
 div.center {
     text-align: center;
-    background-color: #1493EB;
+    background-color: aquamarine;
     display: block;
     margin-left: auto;
     margin-right: auto;
