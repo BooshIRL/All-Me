@@ -54,6 +54,7 @@ body {
       display: block;
       text-align: left;
     }
+    canvas{width: 412px;}
   }
 
 div.center {
