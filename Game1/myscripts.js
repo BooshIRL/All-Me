@@ -6,7 +6,7 @@ function myFunction() {
     x.className = "topnav";
   }
 }
-
+//Canvas
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var ballRadius = 10;
@@ -14,27 +14,44 @@ var x = canvas.width / 2;
 var y = canvas.height - 30;
 var dx = 2;
 var dy = -2;
+//Paddle & Controls
 var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
+//Bricks
+var brickRowCount = 3;
+var brickCalumnCount = 5;
+var brickWidth = 75;
+var brickHeight = 20;
+var brickPadding = 10;
+var brickOffsetTop = 30;
+var brickOffsetLeft = 30;
+
+var bricks = [];
+for (let c = 0; c < brickCalumnCount; c++) {
+  bricks[c] = [];
+  for (let r = 0; r < brickRowCount; c++) {
+    bricks[c][r] = {x: 0, y: 0};
+  }
+}
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
+  if (e.key === "Right" || e.key === "d" || e.key === "ArrowRight") {
     rightPressed = true;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "a" || e.key === "ArrowLeft") {
     leftPressed = true;
   }
 }
 
 function keyUpHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
+  if (e.key === "Right" || e.key === "d" || e.key === "ArrowRight") {
     rightPressed = false;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "a" || e.key === "ArrowLeft") {
     leftPressed = false;
   }
 }
@@ -64,17 +81,25 @@ function draw() {
     dx = -dx;
   }
   
-  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  if (y + dy < ballRadius) {
     dy = -dy;
+  } else if (y + dy > canvas.height - ballRadius) {
+    if (x > paddleX && x < paddleX + paddleWidth) {
+      dy = -dy;
+    } else {
+      alert("Game Over!");
+      document.location.reload();
+      clearInterval(interval);
+    }
   }
 
   if (rightPressed) {
-    paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
+    paddleX = Math.min(paddleX + 5, canvas.width - paddleWidth);
   } else if (leftPressed) {
-    paddleX = Math.max(paddleX - 7, 0);
+    paddleX = Math.max(paddleX - 5, 0);
   }
   x += dx;
   y += dy
 }
 
-setInterval(draw, 10);
+const interval = setInterval(draw, 10);
