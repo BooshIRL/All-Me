@@ -56,6 +56,14 @@ function keyUpHandler(e) {
   }
 }
 
+function collisionDetection() {
+  for (let c = 0; c < brickColumnCount; c++;) {
+    for (let r = 0; r < brickColumnCount; r++) {
+      const b = bricks[c][rS]
+    }
+  }
+}
+
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
