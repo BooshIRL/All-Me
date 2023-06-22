@@ -29,7 +29,7 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 let score = 0;
-let lives = 3;
+let lives = 2;
 
 var bricks = [];
 for (let c = 0; c < brickColumnCount; c++) {
